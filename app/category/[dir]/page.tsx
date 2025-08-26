@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Header from '../../components/Header'
 import CategoryGallery from '../../components/CategoryGallery'
 import ClientOnly from '../../components/ClientOnly'
+import { HeaderAd, InContentAd, FooterAd } from '../../components/AdSense'
 
 interface CategoryPageProps {
   params: {
@@ -41,6 +42,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
+      <HeaderAd />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Category Header */}
@@ -64,10 +66,14 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         }>
           <CategoryGallery dir={dir} categoryName={categoryName} />
         </ClientOnly>
+
+        {/* 内容中广告 */}
+        <InContentAd />
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t mt-16">
+      <FooterAd />
+      <footer className="bg-white border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-gray-600">
             <p>&copy; 2024 美图欣赏. 保留所有权利.</p>

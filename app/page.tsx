@@ -5,6 +5,7 @@ import { Suspense } from 'react'
 import ImageGallery from './components/ImageGallery'
 import ClientOnly from './components/ClientOnly'
 import ErrorBoundary from './components/ErrorBoundary'
+import { HeaderAd, InContentAd, FooterAd } from './components/AdSense'
 
 export const metadata: Metadata = {
   title: '美图欣赏 - 精选高质量图片分享平台',
@@ -21,6 +22,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
+      <HeaderAd />
       
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
@@ -71,14 +73,17 @@ export default function HomePage() {
               <div className="flex justify-center items-center py-20">
                 <div className="text-center">
                   <div className="w-8 h-8 border-4 border-primary-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                  <p className="text-gray-600">正在加载美图...</p>
-                </div>
+                <p className="text-gray-600">正在加载美图...</p>
               </div>
+            </div>
             }>
               <ImageGallery />
             </Suspense>
           </ClientOnly>
         </ErrorBoundary>
+
+        {/* 内容中广告 */}
+        <InContentAd />
 
         {/* SEO Content */}
         <section className="mt-16 prose prose-lg max-w-none">
@@ -111,7 +116,8 @@ export default function HomePage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t mt-16">
+      <FooterAd />
+      <footer className="bg-white border-t">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-gray-600">
             <p>&copy; 2024 美图欣赏. 保留所有权利.</p>
