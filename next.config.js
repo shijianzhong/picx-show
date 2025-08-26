@@ -45,6 +45,10 @@ const nextConfig = {
   // 处理水合警告
   reactStrictMode: true,
   swcMinify: true,
+  // 确保在Vercel上正确工作
+  // experimental: {
+  //   appDir: true, // 在Next.js 14中不再需要
+  // },
 }
 
 module.exports = nextConfig

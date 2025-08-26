@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: '美图欣赏',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://picsum.photos/1200/630',
         width: 1200,
         height: 630,
         alt: '美图欣赏 - 精选高质量图片分享平台',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '美图欣赏 - 精选高质量图片分享平台',
     description: '发现和分享最美的高质量图片，包含风景、人物、艺术等多种类型的美图，为您提供视觉盛宴。',
-    images: ['/og-image.jpg'],
+    images: ['https://picsum.photos/1200/630'],
   },
   robots: {
     index: true,
@@ -69,8 +69,6 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#3b82f6" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Google AdSense */}
