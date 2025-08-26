@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 确保在Vercel上正确工作
+  output: 'standalone',
+  
   images: {
     remotePatterns: [
       {
@@ -11,6 +14,7 @@ const nextConfig = {
     ],
     formats: ['image/webp', 'image/avif'],
   },
+  
   async headers() {
     return [
       {
@@ -32,6 +36,7 @@ const nextConfig = {
       },
     ]
   },
+  
   // 忽略 punycode 弃用警告
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -42,13 +47,10 @@ const nextConfig = {
     }
     return config
   },
+  
   // 处理水合警告
   reactStrictMode: true,
   swcMinify: true,
-  // 确保在Vercel上正确工作
-  // experimental: {
-  //   appDir: true, // 在Next.js 14中不再需要
-  // },
 }
 
 module.exports = nextConfig
