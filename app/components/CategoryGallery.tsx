@@ -26,6 +26,8 @@ interface ApiResponse {
       nextStart: number
     }
   }
+  error?: string
+  message?: string
 }
 
 interface CategoryGalleryProps {

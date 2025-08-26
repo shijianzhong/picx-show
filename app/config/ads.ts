@@ -41,31 +41,31 @@ export const AD_CONFIG = {
     header: {
       enabled: true,
       slot: AD_SLOTS.HEADER_BANNER,
-      format: 'banner',
+      format: 'banner' as const,
       className: 'min-h-[90px]',
     },
     sidebar: {
       enabled: true,
       slot: AD_SLOTS.SIDEBAR_RECTANGLE,
-      format: 'rectangle',
+      format: 'rectangle' as const,
       className: 'min-h-[250px]',
     },
     inContent: {
       enabled: true,
       slot: AD_SLOTS.IN_CONTENT_AUTO,
-      format: 'auto',
+      format: 'auto' as const,
       className: 'min-h-[280px]',
     },
     footer: {
       enabled: true,
       slot: AD_SLOTS.FOOTER_BANNER,
-      format: 'banner',
+      format: 'banner' as const,
       className: 'min-h-[90px]',
     },
     gridInline: {
       enabled: true,
       slot: AD_SLOTS.GRID_INLINE,
-      format: 'rectangle',
+      format: 'rectangle' as const,
       className: 'min-h-[250px]',
     },
   },
@@ -91,7 +91,7 @@ export const PAGE_AD_CONFIG = {
 export const AD_STYLES = {
   container: {
     display: 'block',
-    textAlign: 'center',
+    textAlign: 'center' as const,
     margin: '0 auto',
   },
   responsive: {
