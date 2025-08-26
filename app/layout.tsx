@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://your-domain.com'),
+  metadataBase: new URL('https://picx-show.pages.dev'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: '美图欣赏 - 精选高质量图片分享平台',
     description: '发现和分享最美的高质量图片，包含风景、人物、艺术等多种类型的美图，为您提供视觉盛宴。',
-    url: 'https://your-domain.com',
+    url: 'https://picx-show.pages.dev',
     siteName: '美图欣赏',
     images: [
       {

@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 
+export const dynamic = 'force-dynamic'
+
 const API_BASE_URL = "https://picx.ink-home.cn/api/manage/list";
 const API_TOKEN = "imgbed_n5M4iqcwnaQUBQe5Dh8dZwxWBDq0ZESN";
 
