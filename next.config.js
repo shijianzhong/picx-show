@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 确保在Vercel上正确工作
-  output: 'standalone',
-  
   images: {
     remotePatterns: [
       {

@@ -22,7 +22,6 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.14",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
